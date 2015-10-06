@@ -5,11 +5,11 @@ DESC="nodechat deamon script"
 PIDFILE="/var/run/${NAME}.pid"
 LOGFILE="/var/log/${NAME}.log"
 
-# PHP binary path
-DAEMON="node"
+# node binary path
+DAEMON="/usr/bin/node"
 
-# Path of your php script
-DAEMON_OPTS="/home/website/nodechat/nodechat/server.js"
+# Path of your  script
+DAEMON_OPTS="/home/nodechat/server.js"
 
 START_OPTS="--start --background --make-pidfile --pidfile ${PIDFILE} --exec ${DAEMON} ${DAEMON_OPTS}"
 STOP_OPTS="--stop --pidfile ${PIDFILE}"
